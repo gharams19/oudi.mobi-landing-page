@@ -6,10 +6,11 @@ class NavBar extends Component {
   render() {
     return (
       <div id = "navbar">
-        <a href = "">Home</a>
-        <a href = "">About</a>
-        <a href = "">Subscribe</a>
-        <a href = "">Privacy and Security</a>
+        <FontAwesomeIcon icon = {faSearch} id = "searchIcon"/>
+        <a href = "#home">Home</a>
+        <a href = "#about">About</a>
+        <a href = "#subscribe">Subscribe</a>
+        <a href = "#privacy">Privacy and Security</a>
       </div>
     );
   }
@@ -18,7 +19,26 @@ class NavBar extends Component {
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <section id = "home">
+        <NavBar/>
+        <p className="content">Oudi.mobi™ core mission is redifining freedom of speech</p>
+      </section>
+      <section id = "about">
+        <h1 className="title">
+          About
+        </h1>
+        <div className="contentContainer">
+
+        </div>
+      </section>
+      <section id = "subscribe">
+
+      </section>
+      <section id = "privacy">
+
+      </section>
+      
+
     </div>
   );
 }
