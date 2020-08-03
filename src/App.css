@@ -236,7 +236,7 @@ footer {
   margin-right: 150px;
   margin-bottom: 50px;
 }
-footer a {
+footer a, footer btn {
   margin-left: 150px;
   color: black;
 }
