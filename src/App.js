@@ -2,21 +2,29 @@ import React, { Component } from "react";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faSearch,
   faLongArrowAltRight,
   faCircle,
   faCheck,
-  faTimes
+  faTimes,
+  faLongArrowAltLeft
 } from "@fortawesome/free-solid-svg-icons";
+import {faTwitter, faFacebookF,faPinterestP} from "@fortawesome/free-brands-svg-icons";
+import logo from "./logo.png"
 class NavBar extends Component {
   render() {
     return (
+      <div >
+      <img id = "logoImg" alt = "" src = {logo}></img>
+
+      
       <div id="navbar">
-        <FontAwesomeIcon icon={faSearch} id="searchIcon" />
+        <div id = "btnsSection">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#subscribe">Subscribe</a>
         <a href="#privacy">Privacy and Security</a>
+        </div>
+      </div>
       </div>
     );
   }
@@ -207,9 +215,28 @@ class Table2 extends Component {
   }
 }
 function App() {
-  function showPrivacyPage() {
-    document.getElementsByClassName("page")[0].style.display = "none";
-    document.getElementsByClassName("page")[1].style.display = "flex";
+  function showPage(num) {
+    if(num === 1) {
+      document.getElementsByClassName("page")[0].style.display = "none";
+      document.getElementsByClassName("page")[1].style.display = "flex";
+    }
+    else {
+      document.getElementsByClassName("page")[0].style.display = "inline";
+      document.getElementsByClassName("page")[1].style.display = "none";
+    }
+    
+  }
+  function Subscribe() {
+    var input = document.getElementById("email");
+    if(input.value.length === 0){
+      alert("Please enter a valid email address");
+    }
+    else {
+      input.style.display = "none";
+      document.getElementById("SubBtn").style.display = "none";
+      document.getElementById("thanksForSub").style.display = "inline";
+    }
+    
   }
   return (
     <div className="App">
@@ -281,9 +308,11 @@ function App() {
         <section id="subscribe">
           <div className="contentContainer">
             <div className="title">Subscribe to get early access</div>
-            <p className="content">"Your voice is powerful"</p>
+            <p className="content"><div style = {{marginBottom: "20px"}}>"Your voice is powerful"</div>
+            <div id = "thanksForSub">Thank you for subscribing!</div>
+            </p>
             <input type="text" placeholder="Your email" id="email"></input>
-            <btn>Subscribe</btn>
+            <btn id = "SubBtn"onClick={() => Subscribe()}>Subscribe</btn>
           </div>
         </section>
         <section id="privacy">
@@ -296,7 +325,7 @@ function App() {
               replaced the 1995...
             </p>
             <btn
-              onClick={() => showPrivacyPage()}
+              onClick={() => showPage(1)}
               style={{ fontWeight: "400", marginLeft: "50px" }}
             >
               Continue reading <FontAwesomeIcon icon={faLongArrowAltRight} />
@@ -305,7 +334,8 @@ function App() {
         </section>
       </div>
       <div className="page">
-        <h1>Privacy and Security OUDI.MOBI™</h1>
+        <NavBar/>
+        <h1 style={{fontWeight: "600", fontSize: "30px"}}>Privacy and Security OUDI.MOBI™</h1>
         <p style={{ textAlign: "center", color: "black" }}>March 27, 2020</p>
         <p style={{ textAlign: "center", color: "black", marginTop: "20px" }}>
           {" "}
@@ -506,11 +536,18 @@ function App() {
             OUDI.MOBI™  only permits access to personal data by employees who sign in with Google Sign-In and <a href = "https://fidoalliance.org/case-study-series-google-security-keys-work/" target="blank">2-factor authentication</a>
             </p>
           </div>
-          <a href="https://ctt.ac/frids">Tweet</a>
-          <a href = "https://www.facebook.com/sharer/sharer.php?u=https://oudimobi.com/blogs/oudi-mobi%E2%84%A2/privacy-and-security-oudi-mobi%E2%84%A2">Share it</a>
-          <a href = "https://pinterest.com/pin/create/button/?url=https://oudimobi.com/blogs/oudi-mobi%E2%84%A2/privacy-and-security-oudi-mobi%E2%84%A2&media=&description=">Pin it</a>
+          <div  id = "links">
+          <a href="https://ctt.ac/frids" id = "medialinks"><FontAwesomeIcon icon={faTwitter} style = {{marginRight: "5px"}}/>Tweet</a>
+          <a href = "https://www.facebook.com/sharer/sharer.php?u=https://oudimobi.com/blogs/oudi-mobi%E2%84%A2/privacy-and-security-oudi-mobi%E2%84%A2" id = "medialinks"><FontAwesomeIcon icon={faFacebookF} style = {{marginRight: "5px"}}/>Share it</a>
+          <a href = "https://pinterest.com/pin/create/button/?url=https://oudimobi.com/blogs/oudi-mobi%E2%84%A2/privacy-and-security-oudi-mobi%E2%84%A2&media=&description=" id = "medialinks"><FontAwesomeIcon icon={faPinterestP} style = {{marginRight: "5px"}}/>Pin it</a>
+          <div id = "backToHome"onClick={() => showPage(2)}><FontAwesomeIcon icon={faLongArrowAltLeft}/> BACK TO OUDI.MOBI™ </div>
+          </div>
         </div>
       </div>
+      <footer>
+        <a href ="#home">Home</a>
+      © 2020, Oudi.mobi
+      </footer>
     </div>
   );
 }
