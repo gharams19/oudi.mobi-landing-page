@@ -1,228 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowAltRight,
   faCircle,
-  faCheck,
-  faTimes,
   faLongArrowAltLeft
 } from "@fortawesome/free-solid-svg-icons";
 import {faTwitter, faFacebookF,faPinterestP} from "@fortawesome/free-brands-svg-icons";
-import logo from "./logo.png"
-class NavBar extends Component {
-  render() {
-    return (
-      <div >
-      <img id = "logoImg" alt = "" src = {logo}></img>
+import NavBar1 from "./Navigation Bars/Navbar1";
+import NavBar2 from "./Navigation Bars/Navbar2";
+import Table1 from "./Tables/Table1";
+import Table2 from "./Tables/Table2";
 
-      
-      <div id="navbar">
-        <div id = "btnsSection">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#subscribe">Subscribe</a>
-        <a href="#privacy">Privacy and Security</a>
-        </div>
-      </div>
-      </div>
-    );
-  }
-}
 
-class Table1 extends Component {
-  render() {
-    return (
-      <div id ="table1">
-        <div className = "tableContainer">
-            <table id = "t01">
-              <tr>
-                <th>Service name</th>
-                <th>ISO 27001</th>
-                <th>ISO 27017</th>
-                <th>ISO 27018</th>
-                <th>SOC 1</th>
-                <th>SOC 2</th>
-                <th>SOC 3</th>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Cloud Firestore</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Cloud Functions for Firebase</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Cloud Storage for Firebase</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase A/B Testing</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Authentication</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Cloud Messaging</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Crash Reporting</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Crashlytics</td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Dynamic Links</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Hosting</td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faTimes} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-                <td><FontAwesomeIcon icon={faCheck} /></td>
-              </tr>
-
-            </table>
-            </div>
-
-      </div>
-
-    );
-  }
-}
-class Table2 extends Component {
-  render() {
-    return (
-      <div id ="table2">
-        <div className = "tableContainer">
-            <table id = "t01">
-              <tr>
-                <th>Firebase Service</th>
-                <th style = {{textAlign: "center"}}>Personal Data</th>
-                <th style = {{textAlign: "center"}}>How data helps provide the service</th>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Cloud Functions for Firebase</td>
-                <td><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/>IP addresses</td>
-                <td>How it helps: Cloud Functions uses IP addresses to execute event-handling functions and HTTP functions based on end-user actions.
-
-                    <div style = {{marginTop: "10px"}}>Retention: Cloud functions only saves IP addresses temporarily, to provide the service.</div></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Authentication</td>
-                <td>
-                  <div><FontAwesomeIcon icon={faCircle}  style= {{fontSize: "6px", marginRight: "5px"}}/>Passwords</div>
-                  <div><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/>Email addresses</div>
-                  <div><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/> Phone numbers</div>
-                  <div><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/> User agents</div>
-                  <div><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/> IP addresses</div>
-                  </td>
-                <td>How it helps: Firebase Authentication uses the data to enable end-user authentication, and facilitate end-user account management. It also uses user-agent strings and IP addresses to provide added security and prevent abuse during sign-up and authentication.
-
-                <div style = {{marginTop: "10px"}}>Retention: Firebase Authentication keeps logged IP addresses for a few weeks. It retains other authentication information until the Firebase customer initiates deletion of the associated user, after which data is removed from live and backup systems within 180 days.</div></td>
-                
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Cloud Messaging</td>
-                <td><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/>Instance IDs</td>
-                <td>How it helps: Firebase Cloud Messaging uses Instance IDs to determine which devices to deliver messages to.
-
-                <div style = {{marginTop: "10px"}}>Retention: Firebase retains Instance IDs until the Firebase customer makes an API call to delete the ID. After the call, data is removed from live and backup systems within 180 days.</div></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Crash Reporting</td>
-                <td>
-                  <div><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/>Instance IDs</div>
-                <div><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/>Crash traces</div>
-                </td>
-                <td>How it helps: Crash Reporting uses crash stack traces to associate crashes with a project, send email alerts to project members and display them in the Firebase Console, and help Firebase customers debug crashes. It uses Instance IDs to measure number of users impacted by a crash.
-
-                <div style = {{marginTop: "10px"}}>Retention: Crash Reporting retains crash stack traces for 180 days. Firebase retains Instance IDs until the Firebase customer makes an API call to delete the ID. After the call, data is removed from live and backup systems within 180 days.</div></td>
-                
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Crashlytics</td>
-                <td></td>
-                <td>For more information on Crashlytics and end-user data processing, see the Crashlytics <a href =  "https://docs.fabric.io/apple/fabric/data-privacy.html#data-collection-policies" target="blank">Data Collection Policies.</a></td>
-              </tr>
-              <tr>
-                <td id = "firstColumn">Firebase Dynamic Links</td>
-                <td><FontAwesomeIcon icon={faCircle} style= {{fontSize: "6px", marginRight: "5px"}}/>Device specs (iOS)</td>
-                <td>How it helps: Dynamic Links uses device specs on iOS to open newly-installed apps to a specific page or context.
-
-                <div style = {{marginTop: "10px"}}>Retention: Dynamic Links only stores device specs temporarily, to provide the service.</div></td>
-              </tr>
-            </table>
-            </div>
-
-      </div>
-
-    );
-  }
-}
 function App() {
   function showPage(num) {
     if(num === 1) {
       document.getElementsByClassName("page")[0].style.display = "none";
       document.getElementsByClassName("page")[1].style.display = "flex";
+      window.scrollTo(0,0);
     }
     else {
       document.getElementsByClassName("page")[0].style.display = "inline";
       document.getElementsByClassName("page")[1].style.display = "none";
+      window.scrollTo(0,0);
+
     }
     
   }
@@ -238,11 +40,12 @@ function App() {
     }
     
   }
+  
   return (
     <div className="App">
       <div className="page">
         <section id="home">
-          <NavBar />
+          <NavBar1 />
           <p className="goal">
             Oudi.mobi™ core mission is redifining freedom of speech
           </p>
@@ -334,7 +137,7 @@ function App() {
         </section>
       </div>
       <div className="page">
-        <NavBar/>
+        <NavBar2/>
         <h1 style={{fontWeight: "600", fontSize: "30px"}}>Privacy and Security OUDI.MOBI™</h1>
         <p style={{ textAlign: "center", color: "black" }}>March 27, 2020</p>
         <p style={{ textAlign: "center", color: "black", marginTop: "20px" }}>

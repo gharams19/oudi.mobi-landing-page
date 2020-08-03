@@ -21,7 +21,7 @@ a {
   display: flex;
   justify-content: flex-end;
 }
-#navbar a {
+#navbar a, #navbar btn {
   margin-right: 25px;
   color: #cc0000;
   font-weight: 500;
@@ -30,15 +30,24 @@ a {
 
 #navbar a:hover,
 #navbar a:focus,
-#navbar a:active {
+#navbar a:active ,
+#navbar btn:hover,
+#navbar btn:focus,
+#navbar btn:active {
   color: black;
 }
-#logoImg {
+btn:hover {
+  cursor: pointer;
+}
+#logoImg, #logoImg2 {
   width: 20%;
   text-align: left;
   position: absolute;
   padding-left: 20px;
   padding-top: 10px;
+}
+#logoImg2 {
+  padding-top: 30px;
 }
 #searchIcon {
   padding: 10px 300px 10px 10px;
@@ -64,7 +73,6 @@ a {
 #subscribe,
 #privacy,
 .page:nth-child(2) {
-  /* padding: 0px 0px 100px 0px; */
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
