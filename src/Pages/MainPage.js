@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import NavBar1 from "../Navigation Bars/Navbar1";
-
+import image from "../Oudi.mobi.jpg";
 export default class MainPage extends Component {
   render() {
     function showPage(num) {
@@ -33,6 +33,18 @@ export default class MainPage extends Component {
           <p className="goal">
             Oudi.mobi™ core mission is redifining freedom of speech
           </p>
+        </section>
+        <section id="home2">
+          <div className="contentContainer">
+            <div className="title">Voice is the future</div>
+            <p className="content">
+              <iframe
+                width="1050"
+                height="600"
+                src="https://youtu.be/4ILHrmbDaRY"
+              ></iframe>
+            </p>
+          </div>
         </section>
         <section id="about">
           <div className="contentContainer">
@@ -101,11 +113,11 @@ export default class MainPage extends Component {
               </div>
               <div id="thanksForSub">Thank you for subscribing!</div>
             </p>
-            <div id = "inputSection">
-            <input type="text" placeholder="Your email" id="email"></input>
-            <btn id="SubBtn" onClick={() => Subscribe()}>
-              Subscribe
-            </btn>
+            <div id="inputSection">
+              <input type="text" placeholder="Your email" id="email"></input>
+              <btn id="SubBtn" onClick={() => Subscribe()}>
+                Subscribe
+              </btn>
             </div>
           </div>
         </section>
