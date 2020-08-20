@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import NavBar1 from "../Navigation Bars/Navbar1";
-import image from "../Oudi.mobi.jpg";
+import AppImg from "../App.jpeg";
 export default class MainPage extends Component {
   render() {
     function showPage(num) {
@@ -39,9 +39,12 @@ export default class MainPage extends Component {
             <div className="title">Voice is the future</div>
             <p className="content">
               <iframe
+                id = "video"
                 width="1050"
                 height="600"
-                src="https://youtu.be/4ILHrmbDaRY"
+                src="https://www.youtube.com/embed/4ILHrmbDaRY"
+                frameborder="0"
+                allowFullScreen
               ></iframe>
             </p>
           </div>
@@ -74,6 +77,8 @@ export default class MainPage extends Component {
               platform designed around the human voice. No typing "Gone are the
               days of social media typing"
             </p>
+            <img id = "appImg" src = {AppImg} alt = ""></img>
+
           </div>
           <div className="contentContainer">
             <div className="title">Oudi.mobi™ focus</div>

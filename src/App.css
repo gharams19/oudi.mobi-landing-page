@@ -98,6 +98,7 @@ btn:hover {
   width: 40%;
   margin-bottom: 50px;
   animation: float 6s ease-in-out infinite;
+  
 }
 #home2 .contentContainer {
   width: 80%;
@@ -240,6 +241,7 @@ footer {
   text-align: right;
   margin-right: 150px;
   margin-bottom: 50px;
+  font-weight: bold;
 }
 footer a, footer btn {
   margin-left: 150px;
@@ -259,6 +261,16 @@ footer a:hover {
   flex-direction: row;
   justify-content: center;
 }
+#appImg {
+  width: 60%;
+  padding-top: 30px;
+  height: 80%;
+  border-radius: 40px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  margin-left: 110px;
+}
+
 @keyframes float {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
