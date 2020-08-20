@@ -39,6 +39,7 @@ export default class MainPage extends Component {
             <div className="title">Voice is the future</div>
             <p className="content">
               <iframe
+               title = "Voice is the future"
                 id = "video"
                 width="1050"
                 height="600"
